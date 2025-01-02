@@ -1,4 +1,16 @@
 {
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/maintenance.html",
+        "has": [
+          {
+            "type": "header",
+            "key": "x-maintenance-mode",
+            "value": "true"
+          }
+        ]
+      }
+    ]
+  }
   
-  []
-}
