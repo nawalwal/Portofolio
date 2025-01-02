@@ -1,16 +1,19 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/maintenance.html",
-        "has": [
-          {
-            "type": "header",
-            "key": "x-maintenance-mode",
-            "value": "false"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/maintenance",
+      "destination": "/maintenance.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/maintenance",
+      "permanent": false
+    }
+  ]
+}
