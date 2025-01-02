@@ -1,0 +1,116 @@
+<!-- resources/views/portfolio/portfolio.blade.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Link Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Link Animate.css untuk animasi -->
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Link Font Awesome untuk ikon sosial media -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+    /* Animasi background gradient dengan nuansa navy */
+    @keyframes gradientAnim {
+        0% {
+            background: linear-gradient(45deg, #1e3a8a, #334155); /* Navy dan abu-abu gelap */
+        }
+        50% {
+            background: linear-gradient(45deg, #334155, #1e3a8a); /* Kombinasi navy lebih terang */
+        }
+        100% {
+            background: linear-gradient(45deg, #1e3a8a, #334155); /* Kembali ke kombinasi navy */
+        }
+    }
+
+    .animated-background {
+        animation: gradientAnim 12s ease infinite;
+    }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+
+    <!-- Header with Animated Background -->
+    <header class="animated-background text-white p-6 text-center" data-aos="fade-down" data-aos-duration="1500">
+        <h1 class="text-4xl font-bold">Welcome to My Portfolio</h1>
+        <p class="mt-2 text-lg">Check out my work, projects, and certificates.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-700 text-white p-4 flex justify-center sticky top-0 z-10 shadow-md">
+        <a href="index.html" class="px-6 py-2 hover:bg-gray-600">Home</a>
+        <a href="portfolio.html" class="px-6 py-2 hover:bg-gray-600">Portfolio</a>
+        <a href="certificates.html" class="px-6 py-2 hover:bg-gray-600">Certificates</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-10">
+        <!-- Portfolio Section -->
+        <div class="text-center">
+            <h2 class="text-3xl font-semibold" data-aos="fade-up" data-aos-duration="1500">My Projects</h2>
+            <p class="mt-4 text-xl" data-aos="fade-up" data-aos-duration="1500">Check out some of my most recent projects!</p>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <!-- Project Card Example -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:scale-105">
+                <a href="project/project1-detail.html">
+                    <img src="images/project1.jpg" alt="Project Image" class="w-full h-48 object-cover rounded-t mb-4">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Performance of Time-Based Feature Expansion Classification Method for Predicting Disease Spread</h3>
+                        <p class="text-gray-600 mt-2">Improving the accuracy of disease spread prediction with time-based feature expansion methods using machine learning algorithms.</p>
+                        <a href="https://github.com/your-project" class="text-blue-500 mt-4 inline-block hover:underline">View on GitHub</a>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Duplicate the card for more projects -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-transform transform hover:scale-105">
+                <a href="/portfolio/project2">
+                <img src="{{ asset('storage/projects/project2.jpg') }}" alt="Project Image" class="w-full h-48 object-cover rounded mb-4">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Another Project</h3>
+                    <p class="text-gray-600 mt-2">A brief description of another project.</p>
+                    <a href="https://github.com/another-project" class="text-blue-500 mt-4 inline-block hover:underline">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- Add more project cards as needed -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6 text-center mt-auto" data-aos="fade-up" data-aos-duration="1500">
+        <p>&copy; 2025 Riza Nawal Nurriadi. All rights reserved.</p>
+        <div class="mt-4">
+            <p class="text-lg">Connect with me:</p>
+            <div class="flex justify-center mt-2">
+                <a href="https://www.linkedin.com/in/rizanawalnurriadi/" target="_blank" class="px-4 py-2 hover:text-blue-400">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/your-profile" target="_blank" class="px-4 py-2 hover:text-gray-600">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <!-- Ganti ikon Twitter dengan ikon telepon -->
+                <a href="tel:+6285659000556" class="px-4 py-2 hover:text-green-400">
+                    <i class="fas fa-phone fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

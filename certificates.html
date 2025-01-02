@@ -1,0 +1,209 @@
+<!-- resources/views/certificates.blade.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates</title>
+    <!-- Link Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Link Animate.css untuk animasi -->
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Link Font Awesome untuk ikon sosial media -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* Animasi background gradient dengan nuansa navy */
+        @keyframes gradientAnim {
+            0% {
+                background: linear-gradient(45deg, #1e3a8a, #334155); /* Navy dan abu-abu gelap */
+            }
+            50% {
+                background: linear-gradient(45deg, #334155, #1e3a8a); /* Kombinasi navy lebih terang */
+            }
+            100% {
+                background: linear-gradient(45deg, #1e3a8a, #334155); /* Kembali ke kombinasi navy */
+            }
+        }
+
+        .animated-background {
+            animation: gradientAnim 12s ease infinite;
+        }
+
+        /* Menambah ukuran dan posisi tombol untuk scroll */
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .left-button {
+            left: 0;
+        }
+        .right-button {
+            right: 0;
+        }
+
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+
+    <!-- Header with Animated Background -->
+    <header class="animated-background text-white p-6 text-center" data-aos="fade-up" data-aos-duration="1500">
+        <h1 class="text-4xl font-bold">Welcome to My Portfolio</h1>
+        <p class="mt-2 text-lg">Showcasing my projects, certificates, and more.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-700 text-white p-4 flex justify-center sticky top-0 z-10 shadow-md">
+        <a href="index.html" class="px-6 py-2 hover:bg-gray-600">Home</a>
+        <a href="portfolio.html" class="px-6 py-2 hover:bg-gray-600">Portfolio</a>
+        <a href="certificates.html" class="px-6 py-2 hover:bg-gray-600">Certificates</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-10">
+        <!-- Certificates Section -->
+        <div class="text-center">
+            <h2 class="text-3xl font-semibold">My Certificates</h2>
+            <p class="mt-4 text-xl">Here are some of the certificates I have earned.</p>
+        </div>
+
+        <!-- Scrollable Container -->
+        <div class="relative flex overflow-x-auto py-4 px-6 space-x-6 scroll-container">
+            <!-- Sertifikat 1 -->
+            <div class="bg-white rounded-lg shadow-lg w-80 flex-shrink-0">
+                <iframe src="pdfs/Sertifikat5.pdf" 
+                        class="w-full h-48"
+                        frameborder="0">
+                </iframe>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Databases and SQL for Data Science with Python</h3>
+                    <p class="text-gray-600 mt-2">This certificate validates my proficiency in Data Science, with expertise in MySQL and Python programming...</p>
+                    <a href="https://coursera.org/share/ec4b23d09282405810df38129f6bd70a" 
+                       target="_blank"
+                       class="text-blue-500 mt-4 inline-block hover:underline">View Full Certificate</a>
+                </div>
+            </div>
+
+            <!-- Sertifikat 2 -->
+            <div class="bg-white rounded-lg shadow-lg w-80 flex-shrink-0">     
+                <embed src="pdfs/Sertifikat4.pdf" 
+                        class="w-full h-48"
+                        frameborder="0">
+                </iframe>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">IT SKILL BOOSTER </h3>
+                    <p class="text-gray-600 mt-2">I have obtained certifications in HTML, Laravel, PHP, Laragon, and Problem Solving...</p>
+                    <a href="https://drive.google.com/file/d/1le-fjOSUMvFNGW74BrT2F6juSR9bCme4/view?usp=sharing" 
+                       target="_blank"
+                       class="text-blue-500 mt-4 inline-block hover:underline">View Full Certificate</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg w-80 flex-shrink-0">
+                <iframe src="pdfs/Sertifikat3.pdf" 
+                        class="w-full h-48"
+                        frameborder="0">
+                </iframe>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Machine Learning Foundations: A Case Study Approach </h3>
+                    <p class="text-gray-600 mt-2">This certificate highlights my expertise in Data Science with a focus on Machine Learning and Deep Learning techniques...</p>
+                    <a href="https://coursera.org/share/afb5c95e37882e86f9afd145a17e98aa" 
+                       target="_blank"
+                       class="text-blue-500 mt-4 inline-block hover:underline">View Full Certificate</a>
+                </div>
+            </div>
+            <!-- Sertifikat 4 -->
+            <div class="bg-white rounded-lg shadow-lg w-80 flex-shrink-0">
+                <iframe src="pdfs/Sertifikat2.pdf" 
+                        class="w-full h-48"
+                        frameborder="0">
+                </iframe>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">Intro to Data Analytics </h3>
+                    <p class="text-gray-600 mt-2">I completed the Intro to Data Analytics certification from RevoU, focusing on SQL, Data Visualization, 
+                        Databases, and Tableau, while enhancing my Problem-Solving skills for analyzing and presenting data insights..</p>
+                    <a href="https://drive.google.com/file/d/1dcDFHJdh9OpzLd7IFnz6dlbxzN8qeGYt/view?usp=sharing" 
+                       target="_blank"
+                       class="text-blue-500 mt-4 inline-block hover:underline">View Full Certificate</a>
+                </div>
+            </div>
+
+            <!-- Sertifikat 5 -->
+            <div class="bg-white rounded-lg shadow-lg w-80 flex-shrink-0">
+                <iframe src="pdfs/Sertifikat1.pdf" 
+                        class="w-full h-48"
+                        frameborder="0">
+                </iframe>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold">IT Support Google </h3>
+                    <p class="text-gray-600 mt-2">I’ve completed the IT Support Google certification, gaining skills in Computer Architecture, Cloud Computing, Networking, Customer Service, and Security Engineering. 
+                        The program also strengthened my abilities in Problem Solving, Debugging, Leadership, and Python programming.</p>
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/U96SMDKBWABJ" 
+                       target="_blank"
+                       class="text-blue-500 mt-4 inline-block hover:underline">View Full Certificate</a>
+                </div>
+            </div>
+
+            <!-- Sertifikat lainnya -->
+            <!-- Anda bisa menambahkannya dengan cara yang sama -->
+        </div>
+
+       
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6 text-center mt-auto" data-aos="fade-up" data-aos-duration="1500">
+        <p>&copy; 2025 Riza Nawal Nurriadi. All rights reserved.</p>
+        <div class="mt-4">
+            <p class="text-lg text-gray-400">Connect with me:</p>
+            <div class="flex justify-center mt-2">
+                <a href="https://www.linkedin.com/in/rizanawalnurriadi/" target="_blank" class="px-4 py-2 hover:text-blue-400">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/your-profile" target="_blank" class="px-4 py-2 hover:text-gray-600">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="tel:+6285659000556" class="px-4 py-2 hover:text-green-400">
+                    <i class="fas fa-phone fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS for animations
+
+        // Fungsi untuk menggulirkan kontainer ke kiri
+        function scrollLeft() {
+            const container = document.querySelector('.scroll-container');
+            container.scrollBy({
+                left: -200, // Ukuran scroll kiri
+                behavior: 'smooth'
+            });
+        }
+
+        // Fungsi untuk menggulirkan kontainer ke kanan
+        function scrollRight() {
+            const container = document.querySelector('.scroll-container');
+            container.scrollBy({
+                left: 200, // Ukuran scroll kanan
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

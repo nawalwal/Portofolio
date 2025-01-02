@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance Mode</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #000;
+      color: #fff;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Background */
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 10, 20, 1), #000);
+      overflow: hidden;
+      z-index: -2;
+    }
+
+    .stars {
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      top: -25%;
+      left: -25%;
+      background: radial-gradient(circle, #fff 1px, transparent 1px);
+      background-size: 100px 100px;
+      animation: rotateStars 200s linear infinite;
+    }
+
+    @keyframes rotateStars {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .shooting-star {
+      position: absolute;
+      width: 200px;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+      opacity: 0;
+      animation: shooting 6s linear infinite;
+    }
+
+    .shooting-star:nth-child(1) {
+      top: 30%;
+      left: 70%;
+      animation-delay: 1s;
+    }
+
+    .shooting-star:nth-child(2) {
+      top: 10%;
+      left: 20%;
+      animation-delay: 3s;
+    }
+
+    .shooting-star:nth-child(3) {
+      top: 60%;
+      left: 50%;
+      animation-delay: 5s;
+    }
+
+    @keyframes shooting {
+      0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-400px) translateY(400px);
+        opacity: 0;
+      }
+    }
+
+    /* Main Content */
+    .container {
+      z-index: 1;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .icon {
+      font-size: 4rem;
+      color: #0ff;
+      text-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+      }
+      100% {
+        transform: scale(1.1);
+        text-shadow: 0 0 20px #0ff, 0 0 60px #0ff, 0 0 100px #0ff;
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 0 0 20px #fff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Floating Glow */
+    .floating-glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      top: calc(50% - 150px);
+      left: calc(50% - 150px);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 255, 255, 0.4), transparent);
+      animation: glowMove 8s infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes glowMove {
+      0% {
+        transform: translate(-50px, -50px) scale(1);
+      }
+      100% {
+        transform: translate(50px, 50px) scale(1.2);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .icon {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      .icon {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="stars"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+  </div>
+  <div class="floating-glow"></div>
+  <div class="container">
+    <div class="icon">🚧</div>
+    <h1>Under Maintenance</h1>
+    <p>We're upgrading to something extraordinary.<br>Stay tuned and get ready to be amazed!</p>
+  </div>
+</body>
+</html>
