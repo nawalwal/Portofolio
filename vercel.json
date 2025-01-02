@@ -7,7 +7,7 @@
           {
             "type": "header",
             "key": "x-maintenance-mode",
-            "value": "true"
+            "value": "false"
           }
         ]
       }
