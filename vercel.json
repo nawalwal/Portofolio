@@ -9,11 +9,4 @@
       "destination": "/maintenance.html"
     }
   ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/maintenance",
-      "permanent": false
-    }
-  ]
 }
