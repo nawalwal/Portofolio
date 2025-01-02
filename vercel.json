@@ -1,15 +1,19 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/maintenance.html",
-      "has": [
-        {
-          "type": "cookie",
-          "key": "maintenance_mode",
-          "value": "true"
-        }
-      ]
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/maintenance",
+      "destination": "/maintenance.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/maintenance",
+      "permanent": false
     }
   ]
 }
